@@ -1,0 +1,17 @@
+#task{
+    width:30vw;
+    box-shadow:2px 2px 6px black;
+    border-radius:3px;
+    display:grid;
+    grid-template-columns: 4fr 1fr;
+    margin:5px;
+    background: white;
+}
+
+#task div,form{
+    padding:1rem;
+    text-align: center;
+}
+
+
+
