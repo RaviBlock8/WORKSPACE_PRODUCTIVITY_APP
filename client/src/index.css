@@ -4,3 +4,17 @@
   font-family: 'Roboto';
   font-weight:lighter;
 }
+
+#app{
+  box-sizing: border-box;
+  width:100vw;
+  height:100vh;
+  display:grid;
+  grid-template-rows:20vh 80vh;
+}
+
+#main{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}

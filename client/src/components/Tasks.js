@@ -11,10 +11,24 @@ function Tasks() {
         console.log(list)
         setList([...list])
     }
+
+    const onStart=(id,time)=>{
+        console.log(`id:${id} : time: ${time}`)
+        list[id-1].start=time
+        setList([...list])
+    }
+
+    const onStop=(id,time)=>{
+        console.log(`id:${id} : stop time: ${time}`)
+        list[id-1].stop=time
+        setList([...list])
+    }
+
+
     const displayTask=()=>{
         let toDo=list.filter((task)=>task.stop==null)
         return toDo.map((task)=>{
-            return <Task val={task} key={task.id} onClick={onClick}></Task>
+            return <Task val={task} key={task.id} onClick={onClick} onStart={onStart} onStop={onStop}></Task>
         })
     }
 

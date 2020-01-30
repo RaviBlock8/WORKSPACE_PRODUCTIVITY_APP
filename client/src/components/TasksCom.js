@@ -8,7 +8,16 @@ function TasksCom() {
     const displayTask=()=>{
         let toDo=list.filter((task)=>task.stop!=null)
         return toDo.map((task)=>{
-            return <h2>{task.name}</h2>
+            return (
+                <div id="tab">
+                    <div><h2>{task.name}</h2></div>
+                    <div id="details">
+                        <p>Start Time:{task.start}</p>
+                        <p>Stop Time:{task.stop}</p>
+                    </div>
+
+                </div>
+            )
         })
     }
     return (

@@ -1,10 +1,10 @@
 #com{
     box-shadow:2px 2px 8px black;
-    width:40vw;
+    width:100%;
     
     
     box-sizing: border-box;
-    margin-left:30vw;
+    /* margin-left:30vw; */
 }
 
 #com h1{
@@ -18,12 +18,11 @@
     padding:1.2rem;
 }
 
-h2{
+#tab{
     width:30vw;
     box-shadow:2px 2px 6px black;
     border-radius:3px;
-    display:grid;
-    grid-template-columns: 4fr 1fr;
+    
     margin:5px;
     font-size:1rem;
     padding:1rem;

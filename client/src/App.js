@@ -8,10 +8,18 @@ import {TaskProvider} from './contexts/TaskContext'
 function App() {
   return (
     <TaskProvider>
-      <div className="App">
-      <Tasks></Tasks>
-      <AddTasks></AddTasks>
+      <div id="app">
+        <div>
+        <AddTasks></AddTasks>
+        </div>
+        <div id="main">
+        <Tasks></Tasks>
+      
       <TaskCom></TaskCom>
+
+        </div>
+      
+      
       </div>
     </TaskProvider>
     

@@ -7,9 +7,20 @@ function Task(props) {
     }
     function onStart(e){
         _start=Date.now()
+        e.target.style.display='none'
+        const _dateobj=new Date(_start*1000)
+        props.onStart(props.val.id,_dateobj.toUTCString())
     }
     let onStop=(e)=>{
-        console.log(Date.now()-_start)
+        let _stop=Date.now()
+        console.log(`duration:${_stop-_start}`)
+        const _dateobj=new Date(_stop*1000)
+        props.onStop(props.val.id,_dateobj.toUTCString())
+    }
+
+    let showDetails=()=>{
+        let start=props.val.start!=null?props.val.start:0
+        return <p>Started:{start}</p>
     }
     return (
         <div id="task">
@@ -19,8 +30,11 @@ function Task(props) {
             <form>
                 <button type="button" onClick={onStart}>Start</button>
                 <button type="button" onClick={onStop}>Stop</button>
-                <input type="checkbox" onClick={onClick}></input>
+                {/* <input type="checkbox" onClick={onClick}></input> */}
             </form>
+            <div id="details">
+                {showDetails()}
+            </div>
         </div>
     )
 }
